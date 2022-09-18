@@ -13,26 +13,20 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
 
-
-
 @NgModule({
-  declarations: [								
+  declarations: [
     AppComponent,
-      HeaderComponent,
-      RecipesComponent,
-      ShoppingComponent,
-      RecipeListComponent,
-      RecipeListItemComponent,
-      RecipeDetailComponent,
-      ShoppingListComponent,
-      ShoppingListEditComponent
-   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    CommonModule
+    HeaderComponent,
+    RecipesComponent,
+    ShoppingComponent,
+    RecipeListComponent,
+    RecipeListItemComponent,
+    RecipeDetailComponent,
+    ShoppingListComponent,
+    ShoppingListEditComponent,
   ],
+  imports: [BrowserModule, FormsModule, CommonModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
