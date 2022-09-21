@@ -6,7 +6,7 @@ import { Ingredient } from '../models/ingredient';
   providedIn: 'root',
 })
 export class ShoppingService {
-  // ingredientsChanged = new Subject<Ingredient[]>();
+  startedEditing = new Subject<number>();
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 3),
     new Ingredient('Carrots', 2),
@@ -14,8 +14,16 @@ export class ShoppingService {
   ];
   constructor() {}
 
+  getIngredient(index: number) {
+    return this.ingredients[index];
+  }
+
   getIngredients() {
     return this.ingredients;
+  }
+
+  deleteIngredient(index: number) {
+    return this.ingredients.splice(index, 1);
   }
 
   addIngredient(ingredient: Ingredient) {
@@ -24,5 +32,9 @@ export class ShoppingService {
 
   addIngredients(ingredients: Ingredient[]) {
     this.ingredients.push(...ingredients);
+  }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
   }
 }
