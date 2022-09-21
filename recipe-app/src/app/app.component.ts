@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-app';
-  loadedPath = 'recipe';
-  onNavigate(path: string) {
-    this.loadedPath = path;
-  }
 }
