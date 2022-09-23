@@ -9,7 +9,7 @@ import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), HttpClientModule, AppRoutingModule, SharedModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
